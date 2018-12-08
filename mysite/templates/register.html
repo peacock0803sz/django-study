@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello - Django</title>
+  </head>
+  <body>
+      <h1>Hello, World!</h1>
+      {{ message }}
+      <form method="POST">
+          {% csrf_token %}
+          {{ form }}
+          <button type="submit">Register</button>
+      </form>
+  </body>
+</html>

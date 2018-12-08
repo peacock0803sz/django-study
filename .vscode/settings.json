@@ -1,4 +1,5 @@
 {
     "python.linting.pylintEnabled": false,
     "python.linting.pep8Enabled": true,
+    "python.pythonPath": "py/bin/python",
 }
