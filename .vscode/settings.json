@@ -4,4 +4,5 @@
     "python.linting.pep8Enabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
+    "python.pythonPath": "C:\\Users\\yoichi\\.virtualenvs\\django-study-jWJE9RYj\\Scripts\\python.exe",
 }
