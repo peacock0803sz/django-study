@@ -5,10 +5,10 @@ from . import views
 
 urlpatterns = [
     path('', views.post_list, name='post_list'),
-    path('post/<link.pk/>', views.post_dateil, name='post_dateil')
+    path('post/<link.pk>/', views.post_detail, name='post_detail')
 ]
 
 
-def post_dateil(request, pk):
+def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_dateil.html', {'post': post})
+    return render(request, 'blog/post_detail.html', {'post': post})
