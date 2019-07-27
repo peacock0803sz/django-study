@@ -28,7 +28,7 @@ SECRET_KEY = '11nuv0y-+f(+(dl(hya^rs82&dqoto(+ov=fvk5a!278vt5a-p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -82,8 +82,14 @@ DATABASES = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+         "ENGINE": "django.db.backends.mysql",
+         "NAME": "kiitedb",
+         "USER": "root",
+         "PASSWORD": "root",
+         "HOST": "127.0.0.1",
+         "PORT": "3306",
     }
 }
 
@@ -127,52 +133,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'mysite/static')
 
-from socket import gethostname
-hostname = gethostname()
-
-if "peacock" in hostname:
-    # デバッグ環境
-    DEBUG = True
-    pymysql.install_as_MySQLdb()
-
-    DATABASES = {
-        'default': {
-            #'ENGINE': 'django.db.backends.sqlite3',
-            #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-             "ENGINE": "django.db.backends.mysql",
-             "NAME": "kiitedb",
-             "USER": "root",
-             "PASSWORD": "root",
-             "HOST": "127.0.0.1",
-             "PORT": "3306",
-        }
-    }
-
-    ALLOWED_HOSTS = ["*"]
-else:
-    # 本番環境
-    DEBUG = True
-    LOGGING = {
-        'version': 1,
-        'disable_existing_loggers': False,
-        'handlers': {
-            'console': {
-                'class': 'logging.StreamHandler',
-            },
-        },
-        'loggers': {
-            'django': {
-                'handlers': ['console'],
-                'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
-            },
-        },
-    }
-
-    # DB設定
-    import dj_database_url
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-    db_from_env = dj_database_url.config()
-    DATABASES = {
-        'default': dj_database_url.config()
-    }
-    ALLOWED_HOSTS = ['*']
+# デバッグ環境
+pymysql.install_as_MySQLdb()
