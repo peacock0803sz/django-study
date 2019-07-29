@@ -4,8 +4,6 @@
     <list default="true" id="e3c3c006-c46e-4049-8aa6-74f2146e358a" name="デフォルト" comment="    :fire: Undo command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/wsgi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +88,7 @@
       <workItem from="1564226677248" duration="7565000" />
       <workItem from="1564241309599" duration="9417000" />
       <workItem from="1564284297452" duration="3735000" />
-      <workItem from="1564426724794" duration="2088000" />
+      <workItem from="1564426724794" duration="2679000" />
     </task>
     <task id="LOCAL-00001" summary=":tada: initial commit">
       <created>1564237270483</created>
